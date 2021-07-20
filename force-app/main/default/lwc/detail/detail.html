@@ -1,0 +1,35 @@
+<template>
+  <template if:true={aid}>
+    <div class="slds-align_absolute-center">
+      <div class="slds-size--1-of-3 slds-p-around--medium">
+        <article class="slds-card">
+          <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+              <div class="slds-media__figure">
+                <span class="slds-icon_container slds-icon-standard-account" title="account">
+                  <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                    <use xlink:href="/_slds/icons/standard-sprite/svg/symbols.svg#account"></use>
+                  </svg>
+                </span>
+              </div>
+              <div class="slds-media__body">
+                <h2 class="slds-card__header-title">
+                  <span>Selected account: {aname}</span>
+                </h2>
+              </div>
+              <div class="slds-no-flex">
+                <lightning-button label="Full Details" onclick={navigateToAccountPage}> </lightning-button>
+              </div>
+            </header>
+          </div>
+          <div class="slds-card__body slds-card__body_inner">
+            <p>Type: {atype}</p>
+            <p>Industry: {aind}</p>
+            <p>Budget: ${abudg}</p>
+            <p>Description: {adescr}</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </template>
+</template>

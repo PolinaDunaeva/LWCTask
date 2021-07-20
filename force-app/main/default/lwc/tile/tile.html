@@ -1,0 +1,13 @@
+<template>
+    <div class="container">
+        <a onclick={handleSelect}>
+            <lightning-card title={account.Name}>
+                <p class="slds-p-horizontal_small">Owner: {account.Owner.Name}</p>
+                <p class="slds-p-horizontal_small">Number of Employees: {account.Number_of_Employees__c}</p>
+                <p class="slds-p-horizontal_small">Type: {account.Type}</p>
+                <img class="product-img" src={account.Picture_URL__c}></img>
+                <p slot="footer">${account.Budget__c}</p>
+            </lightning-card>
+        </a>
+    </div>
+</template>

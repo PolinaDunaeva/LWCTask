@@ -1,0 +1,29 @@
+.container {
+    border: 1px rgb(168, 166, 166) solid;
+    border-radius: 5px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 7px;
+    margin-right: 7px;
+}
+
+.title {
+    font-weight: strong;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link {
+    color: rgb(159, 159, 159);
+}
+
+a:hover {
+    color: #f77f76;
+}
+a:active {
+    color: blue;
+}

@@ -1,0 +1,22 @@
+<template>
+    <div class="slds-align_absolute-center">
+        <div class="slds-size--1-of-3 slds-p-around--medium">
+            <lightning-combobox name="type" label="Find an account" value={value} placeholder="Select Type"
+                options={options} onchange={handleChange}></lightning-combobox>
+        </div>
+    </div>
+
+    <div class="slds-align_absolute-center">
+        The amount received using Apex: ${sum}
+        <br>The amount received using Apex SOQL: ${summa}</br>
+        The amount received using JavaScript: ${res}
+    </div>
+
+    <c-detail aname={accName} atype={accType} aind={accInd} abudg={accBudg} adescr={accDescr} aid={selectedId}>
+    </c-detail>
+    <div class="container">
+        <template for:each={accounts} for:item="account">
+            <c-tile key={account.Id} account={account} onobjectlistitemselected={handleObjectListItemSelected}></c-tile>
+        </template>
+    </div>
+</template>
